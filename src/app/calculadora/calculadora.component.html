@@ -1,0 +1,30 @@
+
+<div class="calculadora-container">
+  <h2>Calculadora</h2>
+  <input type="text" [(ngModel)]="num1" placeholder="Número 1" />
+  <input type="text" [(ngModel)]="num2" placeholder="Número 2" />
+
+  <div class="numeros">
+    <button (click)="agregarNumero(1)">1</button>
+    <button (click)="agregarNumero(2)">2</button>
+    <button (click)="agregarNumero(3)">3</button>
+    <button (click)="agregarNumero(4)">4</button>
+    <button (click)="agregarNumero(5)">5</button>
+    <button (click)="agregarNumero(6)">6</button>
+    <button (click)="agregarNumero(7)">7</button>
+    <button (click)="agregarNumero(8)">8</button>
+    <button (click)="agregarNumero(9)">9</button>
+    <button (click)="agregarNumero(0)">0</button>
+    <button (click)="eliminarUltimoDigito()">DEL</button>
+  </div>
+
+  <div class="operaciones">
+    <button (click)="realizarOperacion('+')">+</button>
+    <button (click)="realizarOperacion('-')">-</button>
+    <button (click)="realizarOperacion('*')">*</button>
+    <button (click)="realizarOperacion('/')">/</button>
+    <button (click)="calcularResultado()">=</button>
+  </div>
+
+  <p class="resultado">Resultado: {{ resultado }}</p>
+</div>
